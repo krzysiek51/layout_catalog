@@ -82,7 +82,7 @@
   color: var(--blue-color) !important;
 }
 
-.nav-link.nav-link--active::after {
+.is-active::after {
   content: '';
   position: absolute;
   width: 37px;
