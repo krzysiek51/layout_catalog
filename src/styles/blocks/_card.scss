@@ -1,54 +1,43 @@
-@import 'variables';
+.catalog {
+  gap: 480px 46px;
+}
 
-.product-card {
-  padding: 32px 16px 16px !important;
+.card {
+  padding: 32px 16px 16px;
   width: 200px;
   height: 408px;
   border: 1px solid $color-border;
   border-radius: 5px;
   background-color: $color-white;
-
-  /* Jeśli potrzebujesz innego pozycjonowania, przywróć margin, jaki miałeś oryginalnie.
-     Najczęściej było to np. "margin: 0 auto;" aby wyśrodkować kartę */
-
   box-sizing: border-box;
+  transition: transform 300ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 
   &__img {
     width: 160px;
-    height: 132px;
+    height: 134px;
     display: flex;
-
-    // justify-content: center;
-    // align-items: center;
-    margin: 0 auto 42px;
-
-    .card {
-      img.card__image {
-        width: 160px;
-        height: 134px;
-        object-fit: cover;
-        border-radius: 5px;
-      }
-    }
+    margin: 0 auto 40px;
   }
 
   &__title {
-    line-height: 18px;
     width: 166px;
     height: 36px;
     margin: 0 auto 4;
     display: flex;
+    font-family: $font-family;
+    font-weight: 500;
+    letter-spacing: 0%;
+    font-size: 12px;
+    line-height: 18px;
+    color: #060b35;
+    text-align: left;
 
-    &-text {
-      font-family: $font-family;
-      font-weight: 500;
-      letter-spacing: 1%;
-      display: flex;
-      margin: 0;
-      font-size: 12px;
-      line-height: 18px;
-      color: #060b35;
-      text-align: left;
+    &:hover {
+      color: #34568b;
     }
   }
 
@@ -58,42 +47,60 @@
     height: 14px;
     align-items: center;
     align-content: center;
+    font-family: $font-family;
+    font-weight: $font-weight-regular;
+    font-size: 10px;
+    line-height: 14px;
+    color: #616070;
+    margin-bottom: 17px;
+  }
 
-    &-text {
-      font-family: $font-family;
-      font-weight: $font-weight-regular;
-      font-size: 10px;
-      line-height: 14px;
-      color: $color-gray;
-    }
+  &__stars {
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    margin-bottom: 25px;
+    margin-left: 2px;
+  }
+
+  &__reviews {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 10px; // do sprawdzenia!
+    color: #060b35;
+    text-align: right;
+    vertical-align: bottom;
+    margin-bottom: 1px;
+    margin-right: 0.5px;
   }
 
   &__price {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: $price-section-width;
-    height: 18px;
-    margin: 0 auto 16px;
+    width: 100%;
+    margin-bottom: 16px;
 
     &-text {
       font-family: $font-family;
-      width: 31px;
-      margin-right: auto;
-      font-weight: 200;
+      font-weight: 400;
       font-size: 12px;
-      color: #060b35;
+      line-height: 18px;
+      letter-spacing: 0%;
+      vertical-align: bottom;
+      color: #616070;
     }
   }
 
   &__value {
-    height: 18px;
-    width: 50px;
-    margin-left: auto;
     font-weight: 700;
     font-family: $font-family;
     font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
     text-align: right;
-    margin-bottom: 2px !important;
+    margin-bottom: 0;
     color: #060b35;
   }
 
@@ -107,27 +114,18 @@
     border-radius: 5px;
     background-color: $color-primary;
     transition: background-color 0.3s ease;
-
-    &-text {
-      width: 27px;
-      height: 16px;
-      font-family: $font-family;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 16px;
-      text-align: center;
-      text-transform: uppercase;
-      color: $color-white;
-      text-decoration: none;
-      justify-content: center;
-    }
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+    text-decoration: none;
 
     &:hover {
-      background-color: $color-white;
-
-      .product-card__button-text {
-        color: $color-primary;
-      }
+      background-color: #fff;
+      color: #00acdc;
     }
   }
 }

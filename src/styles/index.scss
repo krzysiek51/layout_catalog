@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'blocks/card';
+@import 'blocks/stars';
+@import 'blocks/catalog';
+@import 'blocks/header';
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+main {
+  // do sprawdzenia!
+  max-width: 1200px;
+  margin: 0 auto;
+}
