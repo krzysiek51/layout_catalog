@@ -1,27 +1,17 @@
-.product-card__stars {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 18px;
-  margin: 15px 0 23px 2px;
-}
-
 .stars {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 5px;
 
   &__star {
-    width: 13px;
-    height: 13px;
-    margin-right: 2px;
+    width: 16px; // 13
+    height: 16px; // 13
+    margin-right: 4px; // 2
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center;
     background-image: url('../images/star.svg'); // Szara gwiazdka domyślnie
 
     &:nth-child(-n + 4) {
-      // Pierwsze 4 gwiazdki będą aktywne
       background-image: url('../images/star-active.svg');
     }
   }
@@ -31,8 +21,6 @@
     align-items: center;
     width: 100%;
     padding-bottom: 1px;
-
-    // min-width: 56px;
     height: 16px;
     font-family: Roboto, sans-serif;
     font-size: 10px;
