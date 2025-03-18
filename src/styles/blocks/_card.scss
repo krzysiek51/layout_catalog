@@ -58,9 +58,10 @@
   &__stars {
     display: flex;
     justify-content: space-between;
-    width: 99%;
+    width: 100%; // 99%
     margin-bottom: 25px;
-    margin-left: 2px;
+
+    // margin-left: 2px;
   }
 
   &__reviews {
@@ -70,8 +71,9 @@
     color: #060b35;
     text-align: right;
     vertical-align: bottom;
-    margin-bottom: 1px;
-    margin-right: 0.5px;
+
+    // margin-bottom: 1px;
+    // margin-right: 0.5px;
   }
 
   &__price {
