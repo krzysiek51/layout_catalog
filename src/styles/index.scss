@@ -3,11 +3,23 @@
 @import 'blocks/stars';
 @import 'blocks/catalog';
 @import 'blocks/header';
+@import 'blocks/nav';
+
+:root {
+  --blue-color: #00acdc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
   margin: 0;
+  background-color: white;
 }
 
 main {
